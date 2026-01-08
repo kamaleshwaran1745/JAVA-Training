@@ -1,9 +1,11 @@
-public class test {
+class Test
+{
+    @Override
     public String toString(){
-        return "From method";
+        return "From Method";
     }
-    public static void main (String args[]){
-        test t = new test();
-        System.out.println(t);
-    }
+	public static void main(String[] args) {
+	     Test t = new Test();
+	     System.out.println(t.toString());
+	}
 }

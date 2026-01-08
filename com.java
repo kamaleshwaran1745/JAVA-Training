@@ -51,6 +51,34 @@ public class com {
           //replace
           System.out.println("Original string:"+s1);
           System.out.println("Replace:"+s1.replace("Software","Application"));
+
+          //trim
+          System.out.println("Original string:"+s3);
+          System.out.println("After him:"+s3.trim());
+
+          //concat
+          System.out.println("Origianl string:"+s1);
+          System.out.println("Concate"+s1.concat("".concat(s4)));
+          System.out.println("Concate"+ s1+s4);
+
+          //split
+          String[] w=s1.split(" ");
+          System.out.println("After split:");
+          for(String w1:w) 
+            System.out.println(w1);
+        
+          //toCharArray()-split as char
+          System.out.println("Original string:"+s1);
+          char[] chararr=s1.toCharArray();
+          for(char c:chararr){
+            System.out.println(c+"-");
+          }              
+
+          //format()
+          int version=24;
+          String s = "Java Platform";
+          String sf = String.format("Tech: %s,Version %d",s,24);
+          System.out.println("\n"+sf);
           
 
 

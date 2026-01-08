@@ -1,14 +1,19 @@
-public class Solution {
-    public int diagonalSum(int[][] mat) {
-        int sum = 0; //matrix diagonal - 1572
-        int n = mat.length;
-        for (int i = 0; i < n; i++) {
-            sum += mat[i][i];          // primary diagonal
-            sum += mat[i][n - i - 1];  // secondary diagonal
+class Solution {
+    public static void main(String args[]) {
+        int num = 38;
+        int dig;
+
+        while (num >= 10) {
+            int rev = 0;
+
+            while (num > 0) {
+                dig = num % 10;
+                rev += dig;
+                num = num / 10;
+            }
+
+            num = rev; // update num
+            System.out.println("Number: " + num);
         }
-        if (n % 2 == 1) {
-            sum -= mat[n / 2][n / 2];  // subtract duplicate center
-        }
-        return sum;
     }
-} 
+}
