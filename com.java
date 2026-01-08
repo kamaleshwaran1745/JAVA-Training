@@ -42,6 +42,17 @@ public class com {
           System.out.println("ENds with:"+s3.endsWith("nt"));
           System.out.println("Ends with:"+s4.endsWith("NT"));
 
+          //indexOf
+          System.out.println("Index of:"+s4.indexOf('n'));
+
+          //Lastindex of
+          System.out.println("Index of:"+s4.lastIndexOf('n'));
+
+          //replace
+          System.out.println("Original string:"+s1);
+          System.out.println("Replace:"+s1.replace("Software","Application"));
+          
+
 
           }
 }
