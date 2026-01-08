@@ -31,5 +31,17 @@ public class com {
           System.out.println("Substring 3:"+s1.substring(5,10));
           System.out.println("Substring 4:"+s1.substring(5,s1.length()-5));
 
+          //contains
+          System.out.println("Original string"+s1);
+          System.out.println("Contains:"+s1.contains("Software"));
+          System.out.println("Contains:"+s1.contains("Software"));
+
+          //Starts with
+          System.out.println("Original string:"+s4);
+          System.out.println("Starts with:"+s3.startsWith("Ba"));
+          System.out.println("ENds with:"+s3.endsWith("nt"));
+          System.out.println("Ends with:"+s4.endsWith("NT"));
+
+
           }
 }
