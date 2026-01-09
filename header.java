@@ -12,23 +12,22 @@ class LLNode {
     }
 }
 
-class Test {
+class {
     LLNode head;
 
     // Insert at Beginning
-    void insertBegin(int rno, String name) {
+    LLNode insertBegin(int rno, String name, LLNode head) {
         LLNode temp = new LLNode(rno, name);
         temp.next = head;
-        head = temp;
+        return temp;
     }
 
     // Insert at End
-    void insertEnd(int rno, String name) {
+    LLNode insertEnd(int rno, String name, LLNode head) {
         LLNode temp = new LLNode(rno, name);
 
         if (head == null) {
-            head = temp;
-            return;
+            return temp;
         }
 
         LLNode curr = head;
@@ -36,10 +35,11 @@ class Test {
             curr = curr.next;
         }
         curr.next = temp;
+        return head;
     }
 
     // Display
-    void display() {
+    void display(LLNode head) {
         if (head == null) {
             System.out.println("List is Empty");
             return;
@@ -53,8 +53,9 @@ class Test {
     }
 }
 
-public class test {
+class linkedlst {
     public static void main(String[] args) {
+
         Test t = new Test();
         Scanner sc = new Scanner(System.in);
         char ch;
@@ -71,16 +72,16 @@ public class test {
             switch (n) {
                 case 1:
                     System.out.println("Enter RollNo and Name :");
-                    t.insertBegin(sc.nextInt(), sc.next());
+                    t.head = t.insertBegin(sc.nextInt(), sc.next(), t.head);
                     break;
 
                 case 2:
                     System.out.println("Enter RollNo and Name :");
-                    t.insertEnd(sc.nextInt(), sc.next());
+                    t.head = t.insertEnd(sc.nextInt(), sc.next(), t.head);
                     break;
 
                 case 3:
-                    t.display();
+                    t.display(t.head);
                     break;
 
                 default:
